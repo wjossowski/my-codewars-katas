@@ -7,7 +7,8 @@
   "scripts": {
     "test:ci": "NODE_ENV=test jest --forceExit --silent --detectOpenHandles",
     "test": "NODE_ENV=test jest --verbose --watchAll --detectOpenHandles --testNamePattern=",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "eslint . --ext .ts,.tsx",
+    "kata": "yarn yo ./generators/new-kata $1"
   },
   "devDependencies": {
     "@types/jest": "^26.0.18",
@@ -20,14 +21,20 @@
     "husky": "^4.3.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
+    "slug": "^5.0.0",
     "ts-jest": "^26.4.4",
     "tsutils": "^3.17.1",
-    "typescript": "^4.1.3"
+    "typescript": "^4.1.3",
+    "yeoman-generator": "^5.2.0",
+    "yo": "^4.1.0"
   },
   "husky": {
     "hooks": {
       "pre-commit": "yarn lint && yarn test:ci"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.21.1",
+    "ramda": "^0.27.1"
+  }
 }
