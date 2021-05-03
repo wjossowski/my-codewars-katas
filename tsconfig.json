@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es2015", "dom", "es2020.string"],
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "allowJs": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "sourceMap": true,
+    "declaration": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true
+  },
+  "exclude": ["node_modules", "lib"],
+  "include": ["./src/**/*.ts"],
+  "rules": {
+    "curly": [true, "ignore-same-line"]
+  }
+}

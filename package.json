@@ -1,0 +1,33 @@
+{
+  "name": "@wjossowski/my-codewars-katas",
+  "version": "1.0.0",
+  "description": "Codewars Katas",
+  "author": "Wojciech Ossowski <w.j.ossowski@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "test:ci": "NODE_ENV=test jest --forceExit --silent --detectOpenHandles",
+    "test": "NODE_ENV=test jest --verbose --watchAll --detectOpenHandles --testNamePattern=",
+    "lint": "eslint . --ext .ts,.tsx"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.18",
+    "@types/node": "^14.14.11",
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-jest": "^24.1.3",
+    "husky": "^4.3.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.4.4",
+    "tsutils": "^3.17.1",
+    "typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint && yarn test:ci"
+    }
+  },
+  "dependencies": {}
+}
